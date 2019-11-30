@@ -25,8 +25,7 @@ void loop() {
    
   Serial.print(i); // Sends the current degree into the Serial Port 
   Serial.print(","); // Sends addition character right next to the previous value needed later in the Processing IDE for indexing 
-  Serial.print(distance); // Sends the distance value into the Serial Port 
-  Serial.print("."); // Sends addition character right next to the previous value needed later in the Processing IDE for indexing 
+  Serial.println(distance); // Sends the distance value into the Serial Port 
   } 
   // Repeats the previous lines from 165 to 15 degrees 
   for(int i=165;i>15;i--){   
@@ -35,8 +34,7 @@ void loop() {
   distance = calculateDistance(); 
   Serial.print(i); 
   Serial.print(","); 
-  Serial.print(distance); 
-  Serial.print("."); 
+  Serial.println(distance); 
   } 
 } 
 // Function for calculating the distance measured by the Ultrasonic sensor 
