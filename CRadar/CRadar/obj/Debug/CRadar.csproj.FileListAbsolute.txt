@@ -1,0 +1,9 @@
+C:\Users\Bellotti_mattia\source\repos\CRadar\CRadar\obj\Debug\SimpleRadar.Form1.resources
+C:\Users\Bellotti_mattia\source\repos\CRadar\CRadar\obj\Debug\CRadar.Properties.Resources.resources
+C:\Users\Bellotti_mattia\source\repos\CRadar\CRadar\obj\Debug\CRadar.csproj.GenerateResource.cache
+C:\Users\Bellotti_mattia\source\repos\CRadar\CRadar\bin\Debug\CRadar.exe.config
+C:\Users\Bellotti_mattia\source\repos\CRadar\CRadar\bin\Debug\CRadar.exe
+C:\Users\Bellotti_mattia\source\repos\CRadar\CRadar\bin\Debug\CRadar.pdb
+C:\Users\Bellotti_mattia\source\repos\CRadar\CRadar\obj\Debug\CRadar.exe
+C:\Users\Bellotti_mattia\source\repos\CRadar\CRadar\obj\Debug\CRadar.pdb
+C:\Users\Bellotti_mattia\source\repos\CRadar\CRadar\obj\Debug\CRadar.csprojAssemblyReference.cache
