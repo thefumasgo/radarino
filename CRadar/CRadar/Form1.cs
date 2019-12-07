@@ -1,14 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using System; 
- using System.Collections.Generic; 
- using System.ComponentModel; 
- using System.Data; 
- using System.Drawing; 
- using System.Linq; 
+using System.Collections.Generic; 
+using System.ComponentModel; 
+using System.Data; 
+using System.Drawing; 
+using System.Linq; 
 using System.Text; 
- using System.Threading.Tasks; 
- using System.Windows.Forms;
+using System.Threading.Tasks; 
+using System.Windows.Forms;
 using System.IO.Ports;
 
 namespace SimpleRadar
@@ -22,10 +22,10 @@ namespace SimpleRadar
 
 
 
-         int WIDTH = 300, HEIGHT = 300, HAND = 150; 
+         int WIDTH = 958, HEIGHT = 1008, HAND = 958; 
  
  
-         int u;  //in degree 
+        int u;  //in degree 
         int cx, cy;     //center of the circle 
         int x, y;       //HAND coordinate 
 
@@ -41,7 +41,7 @@ namespace SimpleRadar
          public Form1()
          {
             InitializeComponent();
-            com = new SerialPort("COM5", 9600);
+            com = new SerialPort("COM3", 9600);
             com.Open();
             p = new Pen(Color.Green, 1f);
         }
@@ -49,17 +49,13 @@ namespace SimpleRadar
 
         private void Form1_Load(object sender, EventArgs e)
         { 
-            //create Bitmap 
-             //bmp = new Bitmap(WIDTH + 1, HEIGHT + 1); 
-
- 
-             //background color 
+            //background color 
             this.BackColor = Color.Black; 
 
  
             //center 
-             cx = WIDTH / 2; 
-             cy = HEIGHT / 2; 
+             cx = WIDTH ; 
+             cy = HEIGHT; 
  
  
              //initial degree of HAND 
@@ -104,30 +100,14 @@ namespace SimpleRadar
             //calculate x, y coordinate of HAND 
             int tu = (u - lim) % 360;
 
-
-            //  if (u >= 0 && u <= 150) 
-           // {
-                //right half 
-                //u in degree is converted into radian. 
-
             
                 x = cx + (int)(HAND * Math.Sin(Math.PI * u / 180));
                 y = cy - (int)(HAND * Math.Cos(Math.PI * u / 180));
-          //  }
 
-             /*else 
-             { 
-                 x = cx - (int) (HAND* -Math.Sin(Math.PI* u / 180)); 
-                 y = cy - (int) (HAND* Math.Cos(Math.PI* u / 180)); 
-             } 
- */
- 
              if (tu >= 0 && tu <= 180) 
              { 
                  //right half 
-                 //tu in degree is converted into radian. 
- 
- 
+                 //tu in degree is converted into radian.
                  tx = cx + (int) (HAND* Math.Sin(Math.PI* tu / 180)); 
                  ty = cy - (int) (HAND* Math.Cos(Math.PI* tu / 180)); 
              } 
@@ -139,32 +119,22 @@ namespace SimpleRadar
 
             //graphics 
             g = this.CreateGraphics();
-
             g.Clear(Color.Black);
-             //draw circle 
-             g.DrawEllipse(p, 0, 0, WIDTH, HEIGHT);  //bigger circle 
-             g.DrawEllipse(p, 80, 80, WIDTH - 160, HEIGHT - 160);    //smaller circle 
- 
-             //draw perpendicular line 
-             g.DrawLine(p, new Point(cx, 0), new Point(cx, HEIGHT)); // UP-DOWN 
-             g.DrawLine(p, new Point(0, cy), new Point(WIDTH, cy)); //LEFT-RIGHT 
+            
+            //draw circle 
+            g.DrawEllipse(p, 0, 50, WIDTH * 2, HEIGHT * 2 - 100);//bigger circle 
+            g.DrawEllipse(p, 250, 300, WIDTH * 2 - 500, HEIGHT * 2 - 600);//smaller circle 
+            g.DrawEllipse(p, 800, 850, WIDTH * 2 - 1600, HEIGHT * 2 - 1700);  
+            g.DrawEllipse(p, 1400, 1450, WIDTH * 2 - 2800, HEIGHT * 2 - 2900);     
+
+            //draw perpendicular line 
+            g.DrawLine(p, new Point(WIDTH, 50), new Point(WIDTH, HEIGHT)); // UP-DOWN 
+             g.DrawLine(p, new Point(0, HEIGHT), new Point(WIDTH * 2, HEIGHT)); //LEFT-RIGHT 
  
  
              //draw HAND 
-             g.DrawLine(new Pen(Color.Black, 1f), new Point(cx, cy), new Point(tx, ty)); 
              g.DrawLine(p, new Point(cx, cy), new Point(x, y)); 
  
- 
-             //load bitmap in picturebox1 
-             //pictureBox1.Image = bmp; 
-            
- 
-             //dispose 
-             //p.Dispose(); 
-             //g.Dispose(); 
- 
- 
-             //update 
            
          } 
      } 
