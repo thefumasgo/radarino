@@ -10,9 +10,9 @@ C:\Users\Bellotti_mattia\source\repos\CRadar\CRadar\obj\Debug\CRadar.csprojAssem
 R:\Desktop\CRadar\CRadar\bin\Debug\CRadar.exe.config
 R:\Desktop\CRadar\CRadar\bin\Debug\CRadar.exe
 R:\Desktop\CRadar\CRadar\bin\Debug\CRadar.pdb
-R:\Desktop\CRadar\CRadar\obj\Debug\CRadar.csprojAssemblyReference.cache
 R:\Desktop\CRadar\CRadar\obj\Debug\SimpleRadar.Form1.resources
 R:\Desktop\CRadar\CRadar\obj\Debug\CRadar.Properties.Resources.resources
 R:\Desktop\CRadar\CRadar\obj\Debug\CRadar.csproj.GenerateResource.cache
 R:\Desktop\CRadar\CRadar\obj\Debug\CRadar.exe
 R:\Desktop\CRadar\CRadar\obj\Debug\CRadar.pdb
+R:\Desktop\CRadar\CRadar\obj\Debug\CRadar.csprojAssemblyReference.cache
